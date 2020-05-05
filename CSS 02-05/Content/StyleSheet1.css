@@ -1,0 +1,50 @@
+﻿html,body {height:100%;
+}
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+  text-align:justify;}
+/*----------layout---------*/
+/*container*/
+.logo{
+    width:1080px;
+    height:40px;
+    margin-left:5px;
+    margin-bottom:5px;
+}
+#container{
+    width:1080px;
+    margin:0 auto;
+}
+nav ul{
+    margin:0;
+    padding:0;
+}
+
+nav ul li{list-style:none;
+          display:inline;
+}
+    nav ul li > a {
+        text-decoration: none;
+        margin-left: 5px;
+    }
+header{
+    display:block;
+    background-color:antiquewhite;
+    padding:10px 0px;
+}
+
+section{
+    background-color:antiquewhite;
+    padding:5px;
+    overflow:auto;
+    float:left;
+    width:80%
+}
+aside{
+    float:right;
+    width:20%;
+}
