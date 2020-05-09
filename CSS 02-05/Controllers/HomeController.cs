@@ -25,10 +25,6 @@ namespace CSS_02_05.Controllers
         {
             return View();
         }
-        public ActionResult MaquetadoFijo()
-        {
-            return View();
-        }
         public ActionResult Selectores1()
         {
             return View();
@@ -38,6 +34,14 @@ namespace CSS_02_05.Controllers
             return View();
         }
         public ActionResult Selectores3()
+        {
+            return View();
+        }
+        public ActionResult MaquetadoFijo()
+        {
+            return View();
+        }
+        public ActionResult MaquetadoElastico()
         {
             return View();
         }
