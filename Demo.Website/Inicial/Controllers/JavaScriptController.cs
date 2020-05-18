@@ -4,20 +4,22 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace Inicial.Controllers
 {
-    public class HomeController : Controller
+    public class JavaScriptController : Controller
     {
-        // GET: Home
+        // GET: JavaScript
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Contacto()
+        public ActionResult Variables()
         {
             return View();
         }
-
+        public ActionResult Condicionales()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Condicionales";
+}
+
+<h2>Condicionales</h2>
+
+<input id="btnListafor" type="button" value="Listar con for" onclick="listarValores()" />
+<br />
+<br />
+<input id="btnForeach" type="button" value="Listar con Foreach" onclick="fnForeach()" />
+<br />
+<br />
+
+<input id="btnListaDoWhile" type="button" value="Listar con  DoWhile" onclick="fnDoWhile()" />
+<br />
+<br />
+<input id="btnListaWhile" type="button" value="Listar con  While" onclick="fnWhile()" />
+<br />
+<br />
+<input id="btnListaSwitch" type="button" value="Listar con  Switch" onclick="fnSwitch()" />
+<br />
+<br />
+<input id="btnListaSwitchJS" type="button" value="Listar con  Switch &  jquery" />
+<br />
+<br />
+<h6>Lista de valores</h6>
+<span id="spDatos">
+</span>
+
+@section scripts
+{
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+
+    <script>
+
+        $("#btnListaSwitchJS").click(function () {
+            var strDatos = '';
+            var x = 0;
+            x = parseInt(window.prompt("ingrese un valor para x:", 0));
+            switch (x) {
+                case 0:
+                    strDatos += "Case jquery " + x + "<br />";
+                    break;
+                case 1:
+                    strDatos += "Case jquery " + x + "<br />";
+                    break;
+                default:
+                    strDatos += "Nada jquery " + x + "<br />";
+                    break;
+            }
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        });
+
+
+    </script>
+
+
+    <script>
+
+        var num = 5;
+        var vector = [2, 5, 8, 9, 10];
+        var strDatos = '';
+
+        function listarValores() {
+
+            strDatos = '';
+            for (var i = 0; i < vector.length; i++) {
+
+                strDatos += vector[i] + "<br />";
+                //if (vector[i] > 5)
+                //    strDatos += vector[i] + "<br />";
+            }
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        }
+
+
+        function fnWhile() {
+            var finish = 10;
+            var x = 0;
+            x = parseInt(window.prompt("ingrese un valor para x:", 0));
+            strDatos = '';
+            while (x < finish) {
+                strDatos += x + "<br />";
+                x++;
+            }
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        }
+
+        function fnDoWhile() {
+            var finish = 10;
+            var x = 0;
+            x = parseInt(window.prompt("ingrese un valor para x:", 0));
+            strDatos = '';
+            do {
+                x++;
+                strDatos += x + "<br />";
+            }
+            while (x < finish)
+
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        }
+
+        function fnForeach() {
+
+            strDatos = '';
+            for (var i in vector) {
+                strDatos += vector[i] + "<br />";
+            }
+
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        }
+
+        function fnSwitch() {
+            var x = 0;
+            x = parseInt(window.prompt("ingrese un valor para x:", 0));
+            switch (x) {
+                case 0:
+                    strDatos += "Case" + x + "<br />";
+                    break;
+                case 1:
+                    strDatos += "Case" + x + "<br />";
+                    break;
+                case 2:
+                    strDatos += "Case" + x + "<br />";
+                    break;
+                default:
+                    strDatos += "Nada" + x + "<br />";
+                    break;
+            }
+            var ctlspan = document.getElementById("spDatos");
+            ctlspan.innerHTML = strDatos;
+        }
+
+
+    </script>
+}

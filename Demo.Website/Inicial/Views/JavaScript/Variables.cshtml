@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Variables";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+<h2>Variables</h2>
+<div>
+    <input id="btnCadena" class="button" type="button"value="Ver valores" onclick="variableCadena()"/>
+</div>
+@section scripts{
+    
+
+    <script>
+        function variableCadena() {
+            var modelo = "Core I4";
+            window.alert(modelo);
+            var num = 2;
+            window.alert(num);
+            var boleana = true;
+            window.alert(boleana);
+            
+            
+        }
+    </script>
+}
